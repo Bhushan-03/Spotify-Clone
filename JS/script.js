@@ -149,7 +149,8 @@ async function main() {
     getFoldersName()
 
     //Get the list of all songs to show as default
-    await getSongs("\Mood%20Universe%5CPurely%20Romantic");
+    await getSongs("/Mood Universe/Purely Romantic");
+    // await getSongs("\Mood%20Universe%5CPurely%20Romantic");
 
     //Attach an event listener to play, next and previous
     play.addEventListener("click", () => {
