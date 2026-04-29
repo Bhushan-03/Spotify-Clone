@@ -1,0 +1,23 @@
+:root {
+    --background-black : #000000;
+    --background-primary-gray : #121212;
+    --background-secondary-gray : #1f1f1f;
+    --color-primary-text : #ffffff;
+    --color-secondary-text : #b3b3b3;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.transparant {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.secondaryText {
+    color: var(--color-secondary-text);
+}
+
+.noBorder {
+    border: none;
+}

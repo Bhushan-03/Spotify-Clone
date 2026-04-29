@@ -1,0 +1,41 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Default file
+DirectoryIndex index.html
+
+# Allow access to files
+Options +FollowSymLinks
+
+# Disable directory browsing (important)
+Options -Indexes
+
+# MIME Types
+AddType text/css .css
+AddType application/javascript .js
+AddType audio/mpeg .mp3
+AddType image/svg+xml .svg
+AddType application/json .json
+
+# Browser Cache
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/svg+xml "access plus 1 month"
+ExpiresByType audio/mpeg "access plus 1 month"
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# If file/folder doesn't exist, go to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

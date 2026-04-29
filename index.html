@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/utility.css">
+</head>
+
+<body>
+    <header>
+        <div class="navigationBar">
+            <div class="hamburgerContainer">
+                <img id="hamburger" class="invert" src="Assets/hamburger.svg" alt="hamburger">
+            </div>
+            <div class="logo">
+                <img class="invert" src="Assets/logo.svg" alt="Logo">
+            </div>
+            <div class="leftNavbar">
+                <div class="mid-section">
+                    <button class="homeBtn">
+                        <img class="invert" src="Assets/home.svg" alt="Home-Icon">
+                    </button>
+                    <div class="searchBox">
+                        <img class="invert" src="Assets/search.svg" alt="search-icon">
+                        <input id="searchInput" type="text" placeholder="What do you want to play?">
+                        <div class="line"></div>
+                        <button class="category transparant noBorder"><img class="invert" src="Assets/category.svg"
+                                alt="category"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="rightNavbar">
+                <div class="sections">
+                    <div class="section1">
+                        <ul>
+                            <li><button class="hBtn premiumBtn transparant secondaryText noBorder">Premium</button></li>
+                            <li><button class="hBtn supportBtn transparant secondaryText noBorder">Support</button></li>
+                            <li><button class="hBtn downloadBtn transparant secondaryText noBorder">Download</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <div class="section2">
+                        <div class="installContainer">
+                            <img class="invert" src="Assets/download.svg" alt="Download">
+                            <button class="hBtn installAppBtn transparant secondaryText noBorder">Install App</button>
+                        </div>
+                        <button class="hBtn signupBtn transparant secondaryText noBorder">Sign up</button>
+                        <button class="loginBtn noBorder">Log in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="library">
+            <div class="heading">
+                <h2>Mood Universe > Purely Romantic</h2>
+            </div>
+            <div class="songList">
+                <ul>
+
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <div class="links">
+                    <ul>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Safety&Privacy Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">About Ads</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <button class="cookiesBtn transparant secondaryText noBorder">
+                    <a href="#">Cookies</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="container">
+                <div class="mainScreen">
+                </div>
+                <div class="playBar">
+                    <div class="songDetails">
+                        <div class="songInfo"></div>
+                        <div class="playbarBtns">
+                            <button class="previousBtn invert noBorder transparant"><img id="previous"
+                                    src="Assets/previous.svg" alt="previous"></button>
+                            <button class="playSongBtn invert noBorder transparant"><img id="play" src="Assets/play.svg"
+                                    alt="play"></button>
+                            <button class="nextBtn invert noBorder transparant"><img id="next" src="Assets/next.svg"
+                                    alt="next"></button>
+                        </div>
+                        <div class="songTime">00:00/00:00</div>
+                    </div>
+                    <div class="seekBar">
+                        <div class="circle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="f-content">
+                <h2>Preview of Spotify</h2>
+                <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+            </div>
+            <button class="signupBtn-footer">Sign up free</button>
+        </div>
+    </footer>
+
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
