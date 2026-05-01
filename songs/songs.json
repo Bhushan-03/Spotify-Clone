@@ -1,0 +1,699 @@
+{
+    "Album": [
+        {
+            "name": "Trending",
+            "subFolder": [
+                {
+                    "sbName": "Aari Aari - Dhurandhar The Revenge",
+                    "songs" : [
+                        {
+                            "songName" : "Dhurandhar The Revenge - Aari Aari"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Banjaare - Bairan",
+                    "songs" : [
+                        {
+                            "songName" : "Banjaare - Bairan"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Gehra Hua (From Dhurandhar )",
+                    "songs" : [
+                        {
+                            "songName" : "Gehra Hua (From Dhurandhar )"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Ishq (From Lost Found)",
+                    "songs" : [
+                        {
+                            "songName" : "Ishq (From Lost Found)"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Jaiye Sajana (From Dhurandhar The Revenge )",
+                    "songs" : [
+                        {
+                            "songName" : "Jaiye Sajana (From Dhurandhar The Revenge )"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Khat - Navjot Ahuja",
+                    "songs" : [
+                        {
+                            "songName" : "Navjot Ahuja - Khat"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Mann Mera - Gajendra Verma",
+                    "songs" : [
+                        {
+                            "songName" : "Gajendra Verma - Mann Mera"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Raanjhan - Parampara Tandon",
+                    "songs" : [
+                        {
+                            "songName" : "Parampara Tandon - Raanjhan"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Shararat (From Dhurandhar)",
+                    "songs" : [
+                        {
+                            "songName" : "Shararat (From Dhurandhar)"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Sheesha (Aakhya Mai Aakh Ghali Jo Bairan)",
+                    "songs" : [
+                        {
+                            "songName" : "Sheesha (Aakhya Mai Aakh Ghali Jo Bairan)"
+                        }
+                    ]
+                }
+            ] 
+        },
+        {
+            "name": "Artists",
+            "subFolder": [
+                {
+                    "sbName": "Anirudh Ravichander",
+                    "songs" : [
+                        {
+                            "songName" : "Aaya Sher (From The Paradise)"
+                        },
+                        {
+                            "songName" : "Arabic Kuthu - Halamithi Habibo (From Beast)"
+                        },
+                        {
+                            "songName" : "Badass (From Leo)"
+                        },
+                        {
+                            "songName" : "Beast Mode"
+                        },
+                        {
+                            "songName" : "Hukum - Thalaivar Alappara"
+                        },
+                        {
+                            "songName" : "Kaavaalaa"
+                        },
+                        {
+                            "songName" : "Monica"  
+                        },
+                        {
+                            "songName" : "Not Ramaiya Vastavaiya"  
+                        },
+                        {
+                            "songName" : "Ordinary Person (From Leo)"  
+                        },
+                        {
+                            "songName" : "Powerhouse (From Coolie) (Telugu)"  
+                        },
+                        {
+                            "songName" : "Thalapathy Kacheri"  
+                        },
+                        {
+                            "songName" : "Vaathi Coming (From Master)"  
+                        },
+                        {
+                            "songName" : "Vikram (Title Track)"  
+                        },
+                        {
+                            "songName" : "Why This Kolaveri Di_ (The Soup of Love)"  
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Arijit Singh",
+                    "songs" : [
+                        {
+                            "songName" : "Apna Bana Le (From Bhediya)"
+                        },
+                        {
+                            "songName" : "Chaleya Jawan"
+                        },
+                        {
+                            "songName" : "Dhun (Movie_ Saiyaara)"
+                        },
+                        {
+                            "songName" : "Dil Cheez Tujhe Dedi Airlift"
+                        },
+                        {
+                            "songName" : "Gehra Hua (From Dhurandhar)"   
+                        },
+                        {
+                            "songName" : "Jhoome Jo Pathaan"   
+                        },
+                        {
+                            "songName" : "Kalank (Title Track)"   
+                        },
+                        {
+                            "songName" : "Lambiyaan Si Judaiyaan Raabta"   
+                        },
+                        {
+                            "songName" : "Phir Se (From Dhurandhar The Revenge)"   
+                        },
+                        {
+                            "songName" : "Tainu Khabar Nahi (From Munjya)"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Armaan Malik",
+                    "songs" : [
+                        {
+                            "songName" : "BESABRIYAAN"
+                        },
+                        {
+                            "songName" : "Bol Do Na Zara"
+                        },
+                        {
+                            "songName" : "Chale Aana (From De De Pyaar De)"
+                        },
+                        {
+                            "songName" : "Dil Mein Ho Tum (From Cheat India)"
+                        },
+                        {
+                            "songName" : "JAB TAK (REDUX)"   
+                        },
+                        {
+                            "songName" : "Oh Isha (From Major)"   
+                        },
+                        {
+                            "songName" : "Padi Padi Leche"   
+                        },
+                        {
+                            "songName" : "Pehla Pyaar"   
+                        },
+                        {
+                            "songName" : "Summa Surrunu (From Etharkkum Thunindhavan)"   
+                        },
+                        {
+                            "songName" : "Theher Ja"   
+                        },
+                        {
+                            "songName" : "Vinnane Vinnane"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Darshan Raval",
+                    "songs" : [
+                        {
+                            "songName" : "Asal Mein"
+                        },
+                        {
+                            "songName" : "Chogada (From Loveyatri)"
+                        },
+                        {
+                            "songName" : "Ek Tarfa - Reprise"
+                        },
+                        {
+                            "songName" : "Hawa Banke"
+                        },
+                        {
+                            "songName" : "Is Qadar"   
+                        },
+                        {
+                            "songName" : "Kamariya"   
+                        },
+                        {
+                            "songName" : "Mahiye Jinna Sohna"   
+                        },
+                        {
+                            "songName" : "Mehrama (From Love Aaj Kal)"   
+                        },
+                        {
+                            "songName" : "Mujhe Peene Do"   
+                        },
+                        {
+                            "songName" : "Odhani (From Made in China)"   
+                        },
+                        {
+                            "songName" : "Soni Soni (From Ishq Vishk Rebound)"   
+                        },
+                        {
+                            "songName" : "Tera Zikr"   
+                        },
+                        {
+                            "songName" : "Tu Hai"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Jubin Nautiyal",
+                    "songs" : [
+                        {
+                            "songName" : "Barbaad (Movie_ Saiyaara)"
+                        },
+                        {
+                            "songName" : "Bewafa Tera Masoom Chehra"
+                        },
+                        {
+                            "songName" : "Ek Mulaqat - Jubin"
+                        },
+                        {
+                            "songName" : "Lut Gaye"
+                        },
+                        {
+                            "songName" : "Narayan Mil Jayega"   
+                        },
+                        {
+                            "songName" : "Raataan Lambiyan (From Shershaah)"   
+                        },
+                        {
+                            "songName" : "Tujhe Kitna Chahein Aur (Film Version)"   
+                        },
+                        {
+                            "songName" : "Tum Hi Aana (From Marjaavaan)"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Shreya Ghoshal",
+                    "songs" : [
+                        {
+                            "songName" : "Ami Je Tomar 3.0"
+                        },
+                        {
+                            "songName" : "CHORI KIYA RE JIYA"
+                        },
+                        {
+                            "songName" : "Dhadhang Dhang (From Rowdy Rathore)"
+                        },
+                        {
+                            "songName" : "Ghar More Pardesiya"
+                        },
+                        {
+                            "songName" : "HANGOVER"   
+                        },
+                        {
+                            "songName" : "Jeene Laga Hoon"   
+                        },
+                        {
+                            "songName" : "Kalapakkaara (From King of Kotha)"   
+                        },
+                        {
+                            "songName" : "MAIN HOON NA"   
+                        },
+                        {
+                            "songName" : "MANWA LAAGE"
+                        },
+                        {
+                            "songName" : "Param Sundari"
+                        },
+                        {
+                            "songName" : "Raabta (Kehte Hain Khuda Ne)"
+                        },
+                        {
+                            "songName" : "Saathiyaa"
+                        },
+                        {
+                            "songName" : "Saiyaara Reprise - Female (Movie_ Saiyaara)"   
+                        },
+                        {
+                            "songName" : "Tere Mast Mast Do Nain (From Dabangg)"   
+                        },
+                        {
+                            "songName" : "Thodi Der"   
+                        },
+                        {
+                            "songName" : "Tum Kya Mile (From Rocky Aur Rani Kii Prem Kahaani)"   
+                        },
+                        {
+                            "songName" : "TUMHE JO MAINE DEKHA"   
+                        },
+                        {
+                            "songName" : "Ve Kamleya (From Rocky Aur Rani Kii Prem Kahaani)"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Stebin Ben",
+                    "songs" : [
+                        {
+                            "songName" : "Baarish Ban Jaana"
+                        },
+                        {
+                            "songName" : "Baithe Baithe"
+                        },
+                        {
+                            "songName" : "Mera Dil Bhi Kitna Pagal Hai (Recreated Version)"
+                        },
+                        {
+                            "songName" : "Mera Mehboob"
+                        },
+                        {
+                            "songName" : "Mere Soneya"   
+                        },
+                        {
+                            "songName" : "Rula Ke Gaya Ishq"   
+                        },
+                        {
+                            "songName" : "Sahiba"   
+                        },
+                        {
+                            "songName" : "Thoda Thoda Pyaar"   
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Mood Universe",
+            "subFolder": [
+                {
+                    "sbName": "Purely Romantic",
+                    "songs" : [
+                        {
+                            "songName" : "A Thousand Years"
+                        },
+                        {
+                            "songName" : "Adele - Make You Feel My Love (Official Video)"   
+                        },
+                        {
+                            "songName" : "Agar Tum Saath Ho Tamasha"
+                        },
+                        {
+                            "songName" : "All of Me"   
+                        },
+                        {
+                            "songName" : "Hawayein Jab Harry Met Sejal (original Motion Picturetrack)"
+                        },
+                        {
+                            "songName" : "Heeriye Arijit Singh"   
+                        },
+                        {
+                            "songName" : "Just the Way You Are"
+                        },
+                        {
+                            "songName" : "Kaun Tujhe M.s. Dhoni The Untold Story"   
+                        },
+                        {
+                            "songName" : "Kesariya Brahmastra"
+                        },
+                        {
+                            "songName" : "Love Me Like You Do (From Fifty Shades Of Grey)"   
+                        },
+                        {
+                            "songName" : "Perfect"
+                        },
+                        {
+                            "songName" : "Raatan Lambiyan Ap Dhillon"   
+                        },
+                        {
+                            "songName" : "Say You Won't Let Go"
+                        },
+                        {
+                            "songName" : "Shayad Love Aaj Kal"   
+                        },
+                        {
+                            "songName" : "Tera Ban Jaunga Kabir Singh"
+                        },
+                        {
+                            "songName" : "Thinking out Loud"   
+                        },
+                        {
+                            "songName" : "Tum Hi Ho Aashiqui 2"   
+                        },
+                        {
+                            "songName" : "Tum Se Hi Remix Jab We Met"
+                        },
+                        {
+                            "songName" : "Until I Found You"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Broken But Beautiful",
+                    "songs" : [
+                        {
+                            "songName" : "Agar Tum Saath Ho Tamasha"
+                        },
+                        {
+                            "songName" : "All I Want"   
+                        },
+                        {
+                            "songName" : "Arcade"
+                        },
+                        {
+                            "songName" : "Before You Go"   
+                        },
+                        {
+                            "songName" : "Channa Mereya Ae Dil Hai Mushkil"
+                        },
+                        {
+                            "songName" : "Fix You"   
+                        },
+                        {
+                            "songName" : "Hasi Female Version Hamari Adhuri Kahani"
+                        },
+                        {
+                            "songName" : "Kabira Encore Yeh Jawaani Hai Deewani"   
+                        },
+                        {
+                            "songName" : "Let Her Go"
+                        },
+                        {
+                            "songName" : "Phir Le Aya Dil Reprise Barfi"   
+                        },
+                        {
+                            "songName" : "Say Something"
+                        },
+                        {
+                            "songName" : "Someone Like You"   
+                        },
+                        {
+                            "songName" : "Tadap Tadap Hum Dil De Chuke Sanam"
+                        },
+                        {
+                            "songName" : "The Night We Met"   
+                        },
+                        {
+                            "songName" : "Tujhe Kitna Chahne Lage Kabir Singh"
+                        },
+                        {
+                            "songName" : "When I Was Your Man"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Mood Booster",
+                    "songs" : [
+                        {
+                            "songName" : "CAN'T STOP THE FEELING"
+                        },
+                        {
+                            "songName" : "Dua Lipa - Levitating"   
+                        },
+                        {
+                            "songName" : "GALLAN GOODIYAAN YASHITA SHARMA"
+                        },
+                        {
+                            "songName" : "Good Life"   
+                        },
+                        {
+                            "songName" : "Happy (From _Despicable Me 2_)"
+                        },
+                        {
+                            "songName" : "ILAHI - ARIJIT SINGH"   
+                        },
+                        {
+                            "songName" : "Kar Gayi Chull"
+                        },
+                        {
+                            "songName" : "Mark Ronson - Uptown Funk"   
+                        },
+                        {
+                            "songName" : "On Top Of The World"
+                        },
+                        {
+                            "songName" : "Señorita"   
+                        },
+                        {
+                            "songName" : "Shake It Off"
+                        },
+                        {
+                            "songName" : "The Weeknd - Blinding Lights"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Chill Vibes Only",
+                    "songs" : [
+                        {
+                            "songName" : "Better Together"
+                        },
+                        {
+                            "songName" : "Holocene"   
+                        },
+                        {
+                            "songName" : "Iktara"
+                        },
+                        {
+                            "songName" : "ILAHI - ARIJIT SINGH"   
+                        },
+                        {
+                            "songName" : "Kasoor"
+                        },
+                        {
+                            "songName" : "Kho Gaye Hum Kahan - Lofi"   
+                        },
+                        {
+                            "songName" : "ocean eyes"
+                        },
+                        {
+                            "songName" : "Passenger - Let Her Go"   
+                        },
+                        {
+                            "songName" : "Petit Biscuit - Sunset Lover"
+                        },
+                        {
+                            "songName" : "Raabta"   
+                        },
+                        {
+                            "songName" : "Stay With Me"
+                        },
+                        {
+                            "songName" : "The Neighbourhood - Sweater Weather"   
+                        },
+                        {
+                            "songName" : "Yellow"   
+                        }
+                    ]
+                }
+            ] 
+        },
+        {
+            "name": "Pure Devotion",
+            "subFolder": [
+                {
+                    "sbName": "Durga Shakti",
+                    "songs" : [
+                        {
+                            "songName" : "Aigiri Nandini"
+                        },
+                        {
+                            "songName" : "Jai maa vaishno devi all bhakti song"   
+                        },
+                        {
+                            "songName" : "माँ दुर्गा भजन"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Ganesh Vibes",
+                    "songs" : [
+                        {
+                            "songName" : "Deva Shree Ganesha"
+                        },
+                        {
+                            "songName" : "Karpur Gauram Karunavtaram"   
+                        },
+                        {
+                            "songName" : "Mahaganapathim"
+                        },
+                        {
+                            "songName" : "Shankarji Ka Damroo"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Shiv Shakti Vibes",
+                    "songs" : [
+                        {
+                            "songName" : "Har Har Mahadev"
+                        },
+                        {
+                            "songName" : "Mere Baba"   
+                        },
+                        {
+                            "songName" : "Namo Namo"
+                        },
+                        {
+                            "songName" : "Oh Shiv Mere"   
+                        },
+                        {
+                            "songName" : "Shiv Swarnamala Stuti"
+                        },
+                        {
+                            "songName" : "Shiva Shiva Shankara"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Hanuman Bhakti",
+                    "songs" : [
+                        {
+                            "songName" : "Hanuman Ashtak"
+                        },
+                        {
+                            "songName" : "Hanuman Chalisa From The Legend Of Hanuman "   
+                        },
+                        {
+                            "songName" : "Raghunandana"
+                        },
+                        {
+                            "songName" : "Shree Hanuman Amritwani"   
+                        },
+                        {
+                            "songName" : "हनुमान चालीसा"
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Krishna Leela",
+                    "songs" : [
+                        {
+                            "songName" : "Adharam Madhuram Lofi - Madhurashtakam"
+                        },
+                        {
+                            "songName" : "Hare Krishna Hare Ram, Shri Krishna Govind"   
+                        },
+                        {
+                            "songName" : "Krishna Trance (From _Karthikeya 2_)"
+                        },
+                        {
+                            "songName" : "Shri Krishna Govind Hare Murari female version"   
+                        },
+                        {
+                            "songName" : "Shri Krishna Govind Hare Murari"
+                        },
+                        {
+                            "songName" : "Tum Prem Ho"   
+                        }
+                    ]
+                },
+                {
+                    "sbName": "Lakshmi Kripa",
+                    "songs" : [
+                        {
+                            "songName" : "Ashtalakshmi Stotram"
+                        },
+                        {
+                            "songName" : "Om Jai Lakshmi Mata Aarti"   
+                        },
+                        {
+                            "songName" : "Om Jai Laxmi Mata"
+                        },
+                        {
+                            "songName" : "लक्ष्मी आरती हिंदी"   
+                        }
+                    ]
+                }
+            ] 
+        }
+    ]
+}

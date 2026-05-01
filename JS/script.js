@@ -14,29 +14,88 @@ function secondsToMinutes(seconds) {
     return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-// Function which takes all song from given folder
-async function getSongs(folder) {
-    currentFolder = folder;
-    let a = await fetch(`/songs/${currentFolder}/`);
-    let response = await a.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
-    songs = []
-    for (let i = 0; i < as.length; i++) {
-        const element = as[i];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`%5C${currentFolder}%5C`)[1]);
+// Function which returns array of albums
+async function getAlbums() {
+    let response = await fetch("songs/songs.json");
+    let data = await response.json();
+    // console.log(data.Album.map(a => a.name));
+    return data.Album.map(a => a.name);
+}
+
+// Function which returns array of sub-folders present in given folder
+async function getSubFolders(albumname) {
+    let response = await fetch("songs/songs.json");
+    let data = await response.json();
+    let subFolders = [];
+    for (let album of data.Album) {
+        if (albumname === album.name) {
+            for (let subf of album.subFolder) {
+                subFolders.push(subf.sbName);
+            }
         }
     }
+    return subFolders;
+}
 
-    // Function that Show all the songs in the playlist
+// Function which returns array of songs present in given folder
+async function getSongs(subfolname) {
+    let response = await fetch("songs/songs.json");
+    let data = await response.json();
+    let songs = [];
+    for (let album of data.Album) {
+        for (let subfol of album.subFolder) {
+            if (subfol.sbName === subfolname) {
+                if (!subfol.songs) {
+                    console.error("Songs Not found in:", subfol);
+                    return [];
+                }
+                for (let song of subfol.songs) {
+                    songs.push(song.songName);
+                }
+                return songs;
+            }
+        }
+    }
+    return [];
+}
+
+
+
+// Function which returns the url or path of given song
+async function fetchURL(songname) {
+    let URl;
+    let response = await fetch("songs/songs.json");
+    let data = await response.json();
+    let albums = await getAlbums();
+    for (const album of albums) {
+        URl = `${album}`;
+        let subfoldersList = await getSubFolders(album);
+        for (const subfolderName of subfoldersList) {
+            URl = URl + `/${subfolderName}`;
+            let songsList = await getSongs(subfolderName);
+            for (const songName of songsList) {
+                if (songName === songname) {
+                    URl = URl + `/${songName}.mp3`;
+                    return URl;
+                }
+            }
+            URl = URl.replace(`/${subfolderName}`, "");
+        }
+    }
+}
+
+// Function which set songs in front-end
+async function setInSongsFrontEnd(subfolderName) {
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
     songUL.innerHTML = "";
+    let response = await fetch("songs/songs.json");
+    let data = await response.json();
+    let albums = await getAlbums();
+    songs = await getSongs(subfolderName);
     for (const song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li><img class="invert" src="Assets/music.svg" alt="music">
                         <div class="info">
-                            <div>${song.replaceAll("%20", " ")}</div>
+                            <div>${song}</div>
                             <div>Harry</div>
                         </div>
                         <div class="playNow">
@@ -59,98 +118,87 @@ const showPB = () => {
     showPlaybar.classList.add("showPlaybar");
 }
 
-const playMusic = (track) => {
-    currentSong.src = `/songs/${currentFolder}/` + track;
+const playMusic = async (songname) => {
+    let songURL = await fetchURL(songname);
+    currentSong.src = `songs/` + songURL;
     currentSong.play();
     play.src = "Assets/pause.svg";
-    document.querySelector(".songInfo").innerHTML = track.replaceAll("%20", " ");
+    document.querySelector(".songInfo").innerHTML = songname;
     document.querySelector(".songTime").innerHTML = "00:00";
     showPB();
 }
 
-// Function which find main folder + sub folder name and convert sub folders in to the cards
-async function getFoldersName() {
-    let a = await fetch(`/songs/`);
-    let response = await a.text();
-    let div = document.createElement("div");
-    let mainScreen = document.querySelector(".mainScreen");
-    div.innerHTML = response;
-    let anchors = div.getElementsByTagName("a")
-    let array = Array.from(anchors);
-    for (let index = 0; index < array.length; index++) {
-        const e = array[index];
-
-        if (e.href.includes("\songs")) {
-            let folderName = e.href.split("%5Csongs%5C").slice(-1)[0].replaceAll("%20", " ").replaceAll("/", "")
-            let heading = document.createElement("h2");
-            heading.innerHTML = `<h2>${folderName}</h2>`
-            document.querySelector(".mainScreen").appendChild(heading)
-            console.log("Heading Inserted Successfully");
-            folderName = folderName.replaceAll(" ", "%20");
-
-
-            let a = await fetch(`/songs/${folderName}/`);
-            let response = await a.text();
-            let div = document.createElement("div");
-            let trendingSongs = document.createElement("div");
-            trendingSongs.className = "trendingSongs";
-            document.querySelector(".mainScreen").appendChild(trendingSongs);
-            console.log("Trending Song div Inserted successfully")
-            div.innerHTML = response;
-            let anchors = div.getElementsByTagName("a")
-            let array = Array.from(anchors);
-            for (let index = 0; index < array.length; index++) {
-                const e = array[index];
-                if (e.href.includes(folderName)) {
-                    let folder = e.href.split(`%5Csongs%5C`).slice(-1)[0].replaceAll("%20", " ").replaceAll("/", "")
-                    let a = await fetch(`/songs/${folder}/info.json`);
-                    let response = await a.json();
-                    trendingSongs.innerHTML = trendingSongs.innerHTML + `<div data-folder="${folder}" class="card">
-                                    <img src="/songs/${folder}/cover.jpg" alt="cover image">
+// Function which set subfolder name in front-end
+async function setsubFolderInFrontEnd(albumname) {
+    let subfoldersList = await getSubFolders(albumname);
+    // console.log(subfoldersList);
+    let trendingSongs = document.createElement("div");
+    trendingSongs.className = "trendingSongs";
+    document.querySelector(".mainScreen").appendChild(trendingSongs);
+    // console.log("Trending Song div Inserted successfully");
+    for (const subfolder of subfoldersList) {
+        let a = await fetch(`/songs/${albumname}/${subfolder}/info.json`);
+        let response = await a.json();
+        trendingSongs.innerHTML = trendingSongs.innerHTML + `<div data-folder="${albumname}/${subfolder}" class="card">
+                                    <img src="/songs/${albumname}/${subfolder}/cover.jpg" alt="cover image">
                                     <button class="playBtn"><img src="Assets/play.svg" alt="Play-icon"></button>
                                     <h3><a href="#">${response.title}</a></h3>
                                     <p><a href="#">${response.description}</a></p>
                                 </div>`
-                }
-            }
+    }
+}
+
+// Function which adjust library
+function showLibrarySection() {
+    if ((window.innerWidth < 768) || (window.innerWidth < 1281)) {
+        if (document.querySelector(".library").style.left === "0px") {
+            document.querySelector(".library").style.left = "-1000px";
+            hamburger.src = "Assets/hamburger.svg"
+        }
+        else {
+            document.querySelector(".library").style.left = "0px";
+            hamburger.src = "Assets/cross.svg"
         }
     }
+}
 
-    // Adjust Library for the android / Tablet whenever card clicked
-    function showLibrarySection() {
-        if ((window.innerWidth < 768) || (window.innerWidth < 1281)) {
-            if (document.querySelector(".library").style.left === "0px") {
-                document.querySelector(".library").style.left = "-1000px";
-                hamburger.src = "Assets/hamburger.svg"
-            }
-            else {
-                document.querySelector(".library").style.left = "0px";
-                hamburger.src = "Assets/cross.svg"
-            }
-        }
+// Function which set album names in front-end
+async function setAlbumInFrentEnd() {
+    let mainScreen = document.querySelector(".mainScreen");
+    let albumsList = await getAlbums();
+    for (const album of albumsList) {
+        let heading = document.createElement("h2");
+        heading.innerHTML = `<h2>${album}</h2>`;
+        document.querySelector(".mainScreen").appendChild(heading);
+        await setsubFolderInFrontEnd(album)
     }
 
     // Load the playlist whenever card is clicked
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
-            let folderName = item.currentTarget.dataset.folder.replaceAll(" ", "%20");
-            songs = await getSongs(`${folderName}`);
+            console.log("card clicked")
+            let folderName = item.currentTarget.dataset.folder;
+            // console.log(item.currentTarget);
+            subfolderName = folderName.split("/")[1];
+            songs = await getSongs(`${subfolderName}`);
+            console.log(songs)
             playMusic(songs[0]);
-            let replacedFN = folderName.replaceAll("%5C", " > ").replaceAll("%20", " ")
-            document.querySelector(".heading").innerHTML = `<h2>${replacedFN}</h2>`
+            let replacedFN = folderName.replaceAll("/", " > ");
+            document.querySelector(".heading").innerHTML = `<h2>${replacedFN}</h2>`;
+            await setInSongsFrontEnd(subfolderName);
             showLibrarySection();
-        })
-    })
+        });
+    });
 }
 
-async function main() {
 
+async function main() {
+    
     // Function which Find and Display All Albums
-    getFoldersName()
+    setAlbumInFrentEnd();
 
     //Get the list of all songs to show as default
-    await getSongs("/Mood Universe/Purely Romantic");
-    // await getSongs("\Mood%20Universe%5CPurely%20Romantic");
+    setInSongsFrontEnd("Purely Romantic");
 
     //Attach an event listener to play, next and previous
     play.addEventListener("click", () => {
@@ -166,12 +214,11 @@ async function main() {
 
     //Listen for timeupdate event
     currentSong.addEventListener("timeupdate", () => {
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0].replaceAll("%20", " ").replace(".mp3", ""));
         document.querySelector(".songTime").innerHTML = `${secondsToMinutes(currentSong.currentTime)} / ${secondsToMinutes(currentSong.duration)}`
         document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
         if (((currentSong.currentTime / currentSong.duration) * 100) === 100) {
-            let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-            console.log("Next Song Playing")
+            // console.log("Next Song Playing")
             if (index !== songs.length - 1) {
                 playMusic(songs[index + 1])
             }
@@ -217,8 +264,8 @@ async function main() {
 
     //Add an event listener to previous button
     previous.addEventListener("click", () => {
-        console.log("previous clicked")
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        // console.log("previous clicked")
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0].replaceAll("%20", " ").replace(".mp3", ""))
         if (index === 0) {
             index = songs.length
             playMusic(songs[index - 1])
@@ -230,8 +277,8 @@ async function main() {
 
     // Add an event listener to next
     next.addEventListener("click", () => {
-        console.log("Next clicked")
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        // console.log("Next clicked")
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0].replaceAll("%20", " ").replace(".mp3", ""))
         if (index === songs.length - 1) {
             index = 0
             playMusic(songs[index])
